@@ -1,0 +1,44 @@
+# vim 相关的配置文件
+
+当前只支持最新版本的 neovim，部分发行版本的包管理器中，neovim版本过老，请手动安装最新版本(**ArchLinux欢迎你**) 。
+
+## 一、安装
+
+```bash
+$ ln -s `pwd`/neovim/init.vim ~/.config/nvim/init.vim
+```
+
+第一次进入vim时会自动下载vim-plug，并自动安装所需的插件。如果有使用代理，可以这样快速安装插件：
+
+```bash
+# 先删除之前的插件
+$ rm -rf plugins/*
+# 使用代理，进入neovim
+$ http_proxy=http://<host>:<port> https_proxy=http://<host>:<port> nvim
+# 在vim中安装插件
+:PlugInstall
+# 一点微小的配置
+:UpdateRemotePlugins
+```
+
+## 二、配置
+
+根据注释修正`~/.config/nvim/init.vim`中的第一部分`全局配置`，一般只需要配置以下环境变量即可：
+
+| 环境变量                         | 说明                                                | 默认值             |
+|----------------------------------|-----------------------------------------------------|--------------------|
+| `SPACEZ_CONFIG_VIM_PYTHON2_PATH` | python2路径，用来设置vim中的`python_host_prog`变量  | `/usr/bin/python2` |
+| `SPACEZ_CONFIG_VIM_PYTHON3_PATH` | python3路径，用来设置vim中的`python3_host_prog`变量 | `/usr/bin/python3` |
+
+要保证这两个Python环境中都有`neovim`这个包，安装方式：
+
++ archlinux：`sudo pacman -S python-neovim python2-neovim`
++ 虚拟环境或其他环境：`pip install neovim`
+
+## 三、其他
+
+下列情况下，需要重新在neovim中执行`:UpdateRemotePlugins`命令：
+
++ 修改本项目路径
++ 修改`python_host_prog`或`python3_host_prog`路径
++ 安装或重新安装`denite`和`deoplete`插件
