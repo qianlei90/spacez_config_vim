@@ -24,7 +24,7 @@ scriptencoding utf-8
     let b:spacez_config_vim_neovim_enable_plugins = v:true
 
     " 路径
-    let b:spacez_config_vim_root_dir                 = fnamemodify(resolve(expand("$MYVIMRC")), ":p:h:h")
+    let b:spacez_config_vim_root_dir                 = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h:h')
     let b:spacez_config_vim_plugins_dir              = b:spacez_config_vim_root_dir  .'/plugins'
     let b:spacez_config_vim_caches_dir               = b:spacez_config_vim_root_dir  .'/caches'
     let b:spacez_config_vim_snips_dir                = b:spacez_config_vim_root_dir  .'/snips'
