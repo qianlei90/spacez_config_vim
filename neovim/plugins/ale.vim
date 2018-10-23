@@ -2,11 +2,11 @@ scriptencoding utf-8
 
 let g:ale_linters = {
 \   'python': ['flake8'],
-\   'go': ['gofmt', 'golint', 'go vet']
+\   'go': ['gofmt', 'golint']
 \ }
 let g:ale_fixers  = {
 \   'python': ['remove_trailing_lines', 'trim_whitespace', 'yapf', 'isort'],
-\   'go': ['gofmt', 'goimports', 'remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['goimports', 'remove_trailing_lines', 'trim_whitespace'],
 \   'vim': ['remove_trailing_lines', 'trim_whitespace'],
 \   'sh': ['remove_trailing_lines', 'trim_whitespace', 'shfmt'],
 \   'markdown': ['remove_trailing_lines', 'trim_whitespace'],
