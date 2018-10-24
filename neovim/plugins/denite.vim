@@ -106,3 +106,4 @@ nnoremap <silent> <Leader>fc :Denite file_rec<CR>
 nnoremap <silent> <Leader>fe :Denite ale<CR>
 nnoremap <silent> <Leader>fy :Denite neoyank<CR>
 nnoremap <silent> <Leader>fg :Denite grep<CR>
+nnoremap <silent> <Leader>fm :Denite mark<CR>
