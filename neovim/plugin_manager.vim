@@ -60,7 +60,7 @@ scriptencoding utf-8
     " 异步CVS提示
     Plug 'mhinz/vim-signify'
     " 文件头
-    Plug 'alpertuna/vim-header'
+    Plug 'alpertuna/vim-header', { 'commit': '312c2c' }
     " 异步补全
     Plug 'Shougo/deoplete.nvim'
         " python
