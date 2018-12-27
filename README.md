@@ -2,26 +2,7 @@
 
 当前只支持最新版本的 neovim，部分发行版本的包管理器中，neovim 版本过老，请手动安装最新版本 (**ArchLinux 欢迎你**) 。
 
-## 一、安装
-
-```bash
-$ ln -sf `pwd`/neovim/init.vim ~/.config/nvim/init.vim
-```
-
-第一次进入 vim 时会自动下载 vim-plug，并自动安装所需的插件。如果有使用代理，可以这样快速安装插件：
-
-```bash
-# 先删除之前的插件
-$ rm -rf plugins/*
-# 使用代理，进入 neovim
-$ http_proxy=http://<proxy_host>:<proxy_port> https_proxy=http://<proxy_host>:<proxy_port> nvim
-# 在 vim 中安装插件
-:PlugInstall
-# 一点微小的配置
-:UpdateRemotePlugins
-```
-
-## 二、配置
+## 一、配置
 
 根据注释修正`~/.config/nvim/init.vim`中的第一部分`全局配置`，一般只需要配置以下环境变量即可：
 
@@ -36,6 +17,21 @@ $ http_proxy=http://<proxy_host>:<proxy_port> https_proxy=http://<proxy_host>:<p
 + 虚拟环境或其他环境：`pip install neovim`
 
 **建议**：将所用到的环境变量写到`~/.bashrc`或`~/.zshrc`中。
+
+## 二、安装
+
+```bash
+$ ./install.sh
+```
+
+如果有使用代理，可以这样快速安装插件：
+
+```bash
+# 先删除之前的插件
+$ rm -rf plugins/*
+# 使用代理，进入 neovim
+$ http_proxy=http://<proxy_host>:<proxy_port> https_proxy=http://<proxy_host>:<proxy_port> ./install.sh
+```
 
 ## 三、其它
 
