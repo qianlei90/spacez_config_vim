@@ -52,7 +52,7 @@ scriptencoding utf-8
     " 文件头
     Plug 'alpertuna/vim-header', { 'commit': '312c2c' }
     " 异步补全
-    Plug 'Shougo/deoplete.nvim'
+    Plug 'Shougo/deoplete.nvim', { 'tag': '4.1', 'do': ':UpdateRemotePlugins' }
         " python
         Plug 'zchee/deoplete-jedi'
         " go

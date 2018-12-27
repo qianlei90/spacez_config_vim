@@ -11,7 +11,6 @@ ROOT_DIR=$(dirname "$(readlink -f "$0")")
 curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qa
-nvim +UpdateRemotePlugins +qa
 
 if [ ! -e "$HOME/.config/nvim" ]; then
     mkdir -p "$HOME/.config/nvim"
