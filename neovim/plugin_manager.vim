@@ -22,7 +22,12 @@ scriptencoding utf-8
     " REF: https://github.com/ryanoasis/nerd-fonts
     Plug 'vim-airline/vim-airline'
     " 各个语言的语法高亮、缩进
-    Plug 'sheerun/vim-polyglot'
+    "
+    " do是为了修正dockerfile无法语法高亮的问题
+    " ref: https://github.com/sheerun/vim-polyglot/issues/361
+    " ref: https://github.com/sheerun/vim-polyglot/pull/362
+    "
+    Plug 'sheerun/vim-polyglot', {'do': 'mv syntax/dockerfile.vim syntax/Dockerfile.vim'}
     " 格式化table
     Plug 'dhruvasagar/vim-table-mode'
     " 中文文档规范化
