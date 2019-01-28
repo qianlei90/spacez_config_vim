@@ -7,15 +7,21 @@
 set -e
 
 ROOT_DIR=$(dirname "$(readlink -f "$0")")
+CONFIG_DIR="$HOME/.config/nvim"
 
-if [ ! -e "$HOME/.config/nvim" ]; then
-    mkdir -p "$HOME/.config/nvim"
+if [ ! -e "$CONFIG_DIR" ]; then
+    mkdir -p "$CONFIG_DIR"
 fi
 
-if [ ! -e "$HOME/.config/nvim/init.vim" ]; then
-    ln -sf "$ROOT_DIR/neovim/init.vim" "$HOME/.config/nvim"
+if [ ! -e "$CONFIG_DIR/init.vim" ]; then
+    ln -sf "$ROOT_DIR/neovim/init.vim" "$CONFIG_DIR"
+fi
+if [ ! -e "$CONFIG_DIR/snips" ]; then
+    ln -sf "$ROOT_DIR/snips" "$CONFIG_DIR"
+fi
+if [ ! -e "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
+    curl -fLo  "$HOME/.local/share/nvim/site/autoload/plug.vim" \
+        --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qa
