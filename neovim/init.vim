@@ -9,19 +9,26 @@ scriptencoding utf-8
     " neovim的python路径
     " NOTICE: 虚拟环境中的python解释器路径
     "         虚拟环境中安装neovim包: pip install neovim
+    let g:python_host_prog = '/usr/bin/python2'
     if exists('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
         let g:python_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
-    else
-        let g:python_host_prog = '/usr/bin/python2'
     endif
+    let g:python3_host_prog = '/usr/bin/python3'
     if exists('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
         let g:python3_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
-    else
-        let g:python3_host_prog = '/usr/bin/python3'
     endif
 
     " 是否启用插件
-    let b:spacez_config_vim_neovim_enable_plugins = v:true
+    let b:spacez_config_vim_enable_plugins = 1
+    if exists('$SPACEZ_CONFIG_VIM_ENABLE_PLUGINS')
+        let b:spacez_config_vim_enable_plugins = expand('$SPACEZ_CONFIG_VIM_ENABLE_PLUGINS')
+    endif
+
+    " 配色是否启用termguicolors
+    let b:spacez_config_vim_enable_guicolors = 1
+    if exists('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
+        let b:spacez_config_vim_enable_guicolors = expand('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
+    endif
 
     " 路径
     let b:spacez_config_vim_root_dir                 = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h:h')
@@ -38,7 +45,7 @@ scriptencoding utf-8
 " }}}
 
 " 插件 {{{
-    if b:spacez_config_vim_neovim_enable_plugins
+    if b:spacez_config_vim_enable_plugins
         let b:plugin_manager_file = b:spacez_config_vim_neovim_dir.'/plugin_manager.vim'
         if filereadable(b:plugin_manager_file)
             execute 'source '.b:plugin_manager_file

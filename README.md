@@ -6,10 +6,13 @@
 
 根据注释修正`~/.config/nvim/init.vim`中的第一部分`全局配置`，一般只需要配置以下环境变量即可：
 
-| 环境变量                         | 说明                                                   | 默认值             |
-|----------------------------------|--------------------------------------------------------|--------------------|
-| `SPACEZ_CONFIG_VIM_PYTHON2_PATH` | python2 路径，用来设置 vim 中的`python_host_prog`变量  | `/usr/bin/python2` |
-| `SPACEZ_CONFIG_VIM_PYTHON3_PATH` | python3 路径，用来设置 vim 中的`python3_host_prog`变量 | `/usr/bin/python3` |
+| 环境变量                             | 说明                                                   | 默认值             |
+|--------------------------------------|--------------------------------------------------------|--------------------|
+| `SPACEZ_CONFIG_VIM_PYTHON2_PATH`     | python2 路径，用来设置 vim 中的`python_host_prog`变量  | `/usr/bin/python2` |
+| `SPACEZ_CONFIG_VIM_PYTHON3_PATH`     | python3 路径，用来设置 vim 中的`python3_host_prog`变量 | `/usr/bin/python3` |
+| `SPACEZ_CONFIG_VIM_ENABLE_PLUGINS`   | 是否启用第三方插件                                     | `1`                |
+| `SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS` | 配色是否启用termguicolors                              | `1`                |
+
 
 要保证这两个 Python 环境中都有`neovim`这个包，安装方式：
 
