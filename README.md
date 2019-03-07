@@ -11,7 +11,7 @@
 | `SPACEZ_CONFIG_VIM_PYTHON2_PATH`     | python2 路径，用来设置 vim 中的`python_host_prog`变量  | `/usr/bin/python2` |
 | `SPACEZ_CONFIG_VIM_PYTHON3_PATH`     | python3 路径，用来设置 vim 中的`python3_host_prog`变量 | `/usr/bin/python3` |
 | `SPACEZ_CONFIG_VIM_ENABLE_PLUGINS`   | 是否启用第三方插件                                     | `1`                |
-| `SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS` | 配色是否启用termguicolors                              | `1`                |
+| `SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS` | 配色是否启用termguicolors                              | `0`                |
 
 
 要保证这两个 Python 环境中都有`neovim`这个包，安装方式：

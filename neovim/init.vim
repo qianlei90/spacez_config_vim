@@ -25,7 +25,7 @@ scriptencoding utf-8
     endif
 
     " 配色是否启用termguicolors
-    let b:spacez_config_vim_enable_guicolors = 1
+    let b:spacez_config_vim_enable_guicolors = 0
     if exists('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
         let b:spacez_config_vim_enable_guicolors = expand('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
     endif
