@@ -22,12 +22,7 @@ scriptencoding utf-8
     " REF: https://github.com/ryanoasis/nerd-fonts
     Plug 'vim-airline/vim-airline'
     " 各个语言的语法高亮、缩进
-    "
-    " do是为了修正dockerfile无法语法高亮的问题
-    " ref: https://github.com/sheerun/vim-polyglot/issues/361
-    " ref: https://github.com/sheerun/vim-polyglot/pull/362
-    "
-    Plug 'sheerun/vim-polyglot', {'do': 'mv syntax/dockerfile.vim syntax/Dockerfile.vim'}
+    Plug 'sheerun/vim-polyglot'
     " 格式化table
     Plug 'dhruvasagar/vim-table-mode'
     " 中文文档规范化
@@ -55,9 +50,9 @@ scriptencoding utf-8
     " 异步CVS提示
     Plug 'mhinz/vim-signify'
     " 文件头
-    Plug 'alpertuna/vim-header', { 'commit': '312c2c' }
+    Plug 'alpertuna/vim-header'
     " 异步补全
-    Plug 'Shougo/deoplete.nvim', { 'tag': '4.1', 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
         Plug 'zchee/deoplete-jedi'
         " go
@@ -75,6 +70,7 @@ scriptencoding utf-8
         Plug 'ujihisa/neco-look'
     " 代码跳转
     Plug 'davidhalter/jedi-vim'
+    " :
     Plug 'dgryski/vim-godef'
     " 引号括号
     Plug 'jiangmiao/auto-pairs'
