@@ -14,83 +14,83 @@ scriptencoding utf-8
     call plug#begin(b:spacez_config_vim_plugins_dir)
 
     " 配色
-    Plug 'joshdick/onedark.vim'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/onedark.vim.git'
     " 支持ansi color
-    Plug 'powerman/vim-plugin-AnsiEsc'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-plugin-AnsiEsc'
     " 状态栏
     " NOTICE: 需要先安装字体
     " REF: https://github.com/ryanoasis/nerd-fonts
-    Plug 'vim-airline/vim-airline'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-airline'
     " 各个语言的语法高亮、缩进
-    Plug 'sheerun/vim-polyglot'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-polyglot'
     " 格式化table
-    Plug 'dhruvasagar/vim-table-mode'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-table-mode'
     " 中文文档规范化
-    Plug 'hotoo/pangu.vim'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/pangu.vim'
     " 启动页面
-    Plug 'mhinz/vim-startify'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-startify'
     " 快速跳转
-    Plug 'easymotion/vim-easymotion'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-easymotion'
     " 快速对齐
-    Plug 'junegunn/vim-easy-align'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-easy-align'
     " 快速注释
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/nerdcommenter'
     " 目录树
-    Plug 'scrooloose/nerdtree'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/nerdtree'
         Plug 'Xuyuanp/nerdtree-git-plugin'
     " 模糊搜索
     " NOTICE: 执行:UpdateRemotePlugins后重启
-    Plug 'Shougo/denite.nvim'
-        Plug 'Shougo/neomru.vim'
-        Plug 'Shougo/neoyank.vim'
-        Plug 'pocari/vim-denite-command-history'
-        Plug 'iyuuya/denite-ale'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/denite.nvim'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/neomru.vim'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/neoyank.vim'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-denite-command-history'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/denite-ale'
     " 异步语法检查
-    Plug 'w0rp/ale'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/ale'
     " 异步CVS提示
-    Plug 'mhinz/vim-signify'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-signify'
     " 文件头
-    Plug 'alpertuna/vim-header'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-header'
     " 异步补全
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
-        Plug 'zchee/deoplete-jedi'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/deoplete-jedi'
         " go
-        Plug 'zchee/deoplete-go'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/deoplete-go'
         " zsh
-        Plug 'zchee/deoplete-zsh'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/deoplete-zsh'
         " vimscript
-        Plug 'Shougo/neco-vim'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/neco-vim'
         " 函数原型
-        Plug 'Shougo/echodoc.vim'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/echodoc.vim'
         " 代码片段
-        Plug 'SirVer/ultisnips'
-            Plug 'honza/vim-snippets'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/ultisnips'
+            Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-snippets'
         " 英文单词查询
-        Plug 'ujihisa/neco-look'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/neco-look'
     " 代码跳转
-    Plug 'davidhalter/jedi-vim'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/jedi-vim'
     " :
-    Plug 'dgryski/vim-godef'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-godef'
     " 引号括号
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'tpope/vim-surround'
-        Plug 'tpope/vim-repeat'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/auto-pairs'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-surround'
+        Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-repeat'
     " 快速编辑时间
-    Plug 'tpope/vim-speeddating'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-speeddating'
     " 高亮括号
-    Plug 'luochen1990/rainbow'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/rainbow'
     " 高亮复制
-    Plug 'machakann/vim-highlightedyank'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-highlightedyank'
     " 标签栏
-    Plug 'majutsushi/tagbar'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/tagbar'
     " 类似shell命令的文件管理
-    Plug 'tpope/vim-eunuch'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-eunuch'
     " undo历史
-    Plug 'simnalamburt/vim-mundo'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-mundo'
     " 图标
     " NOTICE: 这个插件最好最后载入
-    Plug 'ryanoasis/vim-devicons'
+    Plug 'https://git.bugfree.show:30443/GitHubMirror/vim-devicons'
 
     call plug#end()
 " }}}
