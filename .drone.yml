@@ -1,0 +1,25 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: push_to_github
+  image: alpine/git
+  pull: if-not-exists
+  volumes:
+  - name: ssh
+    path: /root/.ssh
+  - name: gitconfig
+    path: /root/.gitconfig
+  commands:
+  - git remote add github git@github.com:qianlei90/spacez_config_vim.git
+  - git push github --all --force
+
+volumes:
+- name: ssh
+  host:
+    path: /root/.ssh
+- name: gitconfig
+  host:
+    path: /root/.gitconfig
