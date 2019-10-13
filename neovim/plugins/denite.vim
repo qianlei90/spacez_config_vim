@@ -1,38 +1,41 @@
 scriptencoding utf-8
 
-" map
-let s:fly_denite_keymaps = {
-    \   'insert': [
-    \       ['<C-a>', '<denite:move_caret_to_head>', 'noremap'],
-    \       ['<C-e>', '<denite:move_caret_to_tail>', 'noremap'],
-    \       ['<A-f>', '<denite:move_caret_to_one_word_right>', 'noremap'],
-    \       ['<A-b>', '<denite:move_caret_to_one_word_left>', 'noremap'],
-    \       ['<C-j>', '<denite:move_to_next_line>', 'noremap'],
-    \       ['<C-k>', '<denite:move_to_previous_line>', 'noremap'],
-    \       ['<C-f>', '<denite:scroll_page_forwards>', 'noremap'],
-    \       ['<C-b>', '<denite:scroll_page_backwards>', 'noremap'],
-    \       ['<C-n>', '<denite:assign_next_matched_text>', 'noremap'],
-    \       ['<C-p>', '<denite:assign_previous_matched_text>', 'noremap'],
-    \       ['<C-s>', '<denite:do_action:split>', 'noremap'],
-    \       ['<C-v>', '<denite:do_action:vsplit>', 'noremap'],
-    \       ['<C-t>', '<denite:do_action:tabswitch>', 'noremap'],
-    \       ['<Down>', '<denite:assign_next_text>', 'noremap'],
-    \       ['<Up>', '<denite:assign_previous_text>', 'noremap'],
-    \   ],
-    \   'normal': [
-    \       ['<C-n>', '<denite:jump_to_next_source', 'noremap'],
-    \       ['<C-p>', '<denite:jump_to_previous_source', 'noremap'],
-    \       ['<C-s>', '<denite:do_action:split>', 'noremap'],
-    \       ['<C-v>', '<denite:do_action:vsplit>', 'noremap'],
-    \       ['<C-t>', '<denite:do_action:tabswitch>', 'noremap'],
-    \   ],
-    \ }
-for s:mode in keys(s:fly_denite_keymaps)
-    for s:args in s:fly_denite_keymaps[s:mode]
-        call denite#custom#map(s:mode, s:args[0], s:args[1], s:args[2])
-    endfor
-endfor
-unlet s:fly_denite_keymaps s:mode s:args
+" 普通模式下的快捷键
+autocmd FileType denite call s:scv_denite_map()
+function! s:scv_denite_map() abort
+    " 打开
+    nnoremap <silent><buffer><expr> <CR>
+    \ denite#do_map('do_action')
+    " 水平切分
+    nnoremap <silent><buffer><expr> s
+    \ denite#do_map('do_action', 'splitswitch')
+    " 垂直切分
+    nnoremap <silent><buffer><expr> v
+    \ denite#do_map('do_action', 'vsplitswitch')
+    " 新标签打开
+    nnoremap <silent><buffer><expr> t
+    \ denite#do_map('do_action', 'tabswitch')
+    " 选择动作
+    nnoremap <silent><buffer><expr> <Tab>
+    \ denite#do_map('choose_action')
+    " 退出
+    nnoremap <silent><buffer><expr> q
+    \ denite#do_map('quit')
+    " 进入筛选模式
+    nnoremap <silent><buffer><expr> i
+    \ denite#do_map('open_filter_buffer')
+    " 上一个source
+    nnoremap <silent><buffer><expr> <C-n>
+    \ denite#do_map('restore_sources')
+endfunction
+
+" 筛选模式下的快捷键
+autocmd FileType denite-filter call s:scv_denite_filter_map()
+function! s:scv_denite_filter_map() abort
+    imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
+    imap <silent><buffer> <C-a> <Home>
+    imap <silent><buffer> <C-e> <End>
+endfunction
 
 " source
 let s:fly_denite_sources = {
@@ -97,12 +100,13 @@ cnoreabbrev dw DeniteCursorWord
 cnoreabbrev dp DeniteProjectDir
 cnoreabbrev p -path=
 cnoreabbrev f $HOME/Fly2TheMoon
+" 快捷键
 nnoremap <silent> <Leader>fa :Denite command<CR>
 nnoremap <silent> <Leader>fh :Denite command_history<CR>
 nnoremap <silent> <Leader>fr :Denite file_mru<CR>
 nnoremap <silent> <Leader>fR :Denite register<CR>
 nnoremap <silent> <Leader>fb :Denite buffer<CR>
-nnoremap <silent> <Leader>fc :Denite file_rec<CR>
+nnoremap <silent> <Leader>fc :Denite file/rec<CR>
 nnoremap <silent> <Leader>fe :Denite ale<CR>
 nnoremap <silent> <Leader>fy :Denite neoyank<CR>
 nnoremap <silent> <Leader>fg :Denite grep<CR>
