@@ -5,7 +5,7 @@ name: default
 
 steps:
 - name: push_to_github
-  image: alpine/git
+  image: spacez/ci_git
   pull: if-not-exists
   volumes:
   - name: ssh
