@@ -90,7 +90,7 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/simnalamburt/vim-mundo'
     " 图标
     " NOTICE: 这个插件最好最后载入
-    Plug 'https://git.bugfree.show:30443/ryanoasis/vim-devicons'
+    " Plug 'https://git.bugfree.show:30443/ryanoasis/vim-devicons'
 
     call plug#end()
 " }}}
