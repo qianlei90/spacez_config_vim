@@ -76,7 +76,7 @@ let s:fly_denite_vars = {
     \   },
     \   'grep': {
     \       'command': ['ag'],
-    \       'default_opts': ['--smart-case', '--vimgrep'],
+    \       'default_opts': ['--smart-case', '--vimgrep', '--ignore-dir', 'vendor', '-w'],
     \       'recursive_opts': [],
     \       'pattern_opt': [],
     \       'separator': ['--'],
