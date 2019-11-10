@@ -133,8 +133,8 @@ scriptencoding utf-8
         syntax on
         " 括号配对情况,跳转并高亮一下匹配的括号
         set showmatch
-        " 不显示行号
-        set nonumber
+        " 显示行号
+        set number
         set norelativenumber
         " 突出显示当前行
         set cursorline
