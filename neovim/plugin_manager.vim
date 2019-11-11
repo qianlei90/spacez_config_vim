@@ -72,7 +72,8 @@ scriptencoding utf-8
     " 异步CVS提示
     Plug 'https://git.bugfree.show:30443/mhinz/vim-signify'
     " 显示函数签名
-    Plug 'https://git.bugfree.show:30443/Shougo/echodoc.vim'
+    " echodoc不显示golang的函数签名，暂时禁用
+    " Plug 'https://git.bugfree.show:30443/Shougo/echodoc.vim'
     " 各个语言的语法高亮、缩进
     Plug 'https://git.bugfree.show:30443/sheerun/vim-polyglot'
     " 模糊搜索
