@@ -253,6 +253,10 @@ scriptencoding utf-8
         " 快速切换相邻标签
         nnoremap <silent> <C-p> <Esc>:tabprev<CR>
         nnoremap <silent> <C-n> <Esc>:tabnext<CR>
+
+        " 移动标签页
+        nnoremap <A-Left> <Esc>:tabmove -1<CR>
+        nnoremap <A-Right> <Esc>:tabmove +1<CR>
     " }}}
 
     " 窗口移动 {{{
