@@ -89,10 +89,10 @@ scriptencoding utf-8
         " 折叠标识
         set foldcolumn=1
         " 折叠后显示的文本
-        function! SpacezConfigVimFuncGetFoldingInfo()
-            return 'Start: ' . v:foldstart . ' End: ' . v:foldend . ' Level: ' . v:foldlevel
-        endfunction
-        set foldtext=SpacezConfigVimFuncGetFoldingInfo()
+        " function! SpacezConfigVimFuncGetFoldingInfo()
+        "     return 'Start: ' . v:foldstart . ' End: ' . v:foldend . ' Level: ' . v:foldlevel
+        " endfunction
+        " set foldtext=SpacezConfigVimFuncGetFoldingInfo()
     " }}}
 
     " 文件 {{{
