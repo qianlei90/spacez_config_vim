@@ -263,8 +263,8 @@ scriptencoding utf-8
     " }}}
 
     " 命令行移动 {{{
-        cnoremap <C-j> <Down>
-        cnoremap <C-k> <Up>
+        cnoremap <C-n> <Down>
+        cnoremap <C-p> <Up>
         cnoremap <C-a> <Home>
         cnoremap <C-e> <End>
         cnoremap <A-f> <S-Right>
