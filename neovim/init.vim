@@ -1,7 +1,3 @@
-" Author            : Qian Lei <qianlei90@gmail.com>
-" Date              : 2018/08/01
-" Last Modified Date: 2018/10/13
-
 set encoding=utf-8
 scriptencoding utf-8
 

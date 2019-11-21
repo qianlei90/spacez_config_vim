@@ -1,10 +1,3 @@
-" File              : plugin_manager.vim
-" Date              : 14.10.2018
-" Last Modified Date: 14.10.2018
-" Author            : Qian Lei <qianlei90@gmail.com>
-" Date              : 2018/08/01
-" Last Modified Date: 2018/08/01
-
 scriptencoding utf-8
 
 " 第三方插件 {{{
