@@ -7,9 +7,9 @@ let g:startify_change_to_vcs_root  = 1
 let g:startify_fortune_use_unicode = 1
 let g:startify_session_sort        = 1
 
-nnoremap <Leader>sS :SLoad<Space>
+nnoremap <Leader>sS :Startify<CR>
+nnoremap <Leader>so :SLoad<Space>
 nnoremap <Leader>ss :SSave!<Space>
-nnoremap <Leader>so :Startify<CR>
 nnoremap <Leader>sc :SClose<CR>
 nnoremap <Leader>sC :SClose<CR>:q<CR>
 nnoremap <Leader>sd :SDelete!<Space>
