@@ -38,11 +38,17 @@ scriptencoding utf-8
     " 引号括号
     Plug 'https://git.bugfree.show:30443/jiangmiao/auto-pairs'
     Plug 'https://git.bugfree.show:30443/tpope/vim-surround'
+    Plug 'https://git.bugfree.show:30443/tpope/vim-repeat'
     " 类似shell命令的文件管理
     Plug 'https://git.bugfree.show:30443/tpope/vim-eunuch'
     " undo历史
     Plug 'https://git.bugfree.show:30443/simnalamburt/vim-mundo'
-
+    " 快速对齐
+    Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
+    " 模糊搜索
+    Plug '/bin/fzf'
+    Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
+    "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -53,6 +59,12 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/majutsushi/tagbar'
     " 异步补全
     Plug 'https://git.bugfree.show:30443/Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        " python
+        " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-jedi'
+        " go
+        " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-go'
+        " zsh
+        Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-zsh'
         " 英文单词查询
         Plug 'https://git.bugfree.show:30443/ujihisa/neco-look'
         " 代码片段
@@ -64,38 +76,31 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/dense-analysis/ale'
     " 异步CVS提示
     Plug 'https://git.bugfree.show:30443/mhinz/vim-signify'
+    " Git
+    Plug 'https://git.bugfree.show:30443/tpope/vim-fugitive.git'
+    " 各个语言的语法高亮、缩进
+    Plug 'https://git.bugfree.show:30443/sheerun/vim-polyglot'
     " 显示函数签名
     " echodoc不显示golang的函数签名，暂时禁用
     " Plug 'https://git.bugfree.show:30443/Shougo/echodoc.vim'
-    " 各个语言的语法高亮、缩进
-    Plug 'https://git.bugfree.show:30443/sheerun/vim-polyglot'
     " 模糊搜索
     " NOTICE: 执行:UpdateRemotePlugins后重启
-    Plug 'https://git.bugfree.show:30443/Shougo/denite.nvim'
-        Plug 'https://git.bugfree.show:30443/Shougo/neomru.vim'
-        Plug 'https://git.bugfree.show:30443/Shougo/neoyank.vim'
-        Plug 'https://git.bugfree.show:30443/pocari/vim-denite-command-history'
-        Plug 'https://git.bugfree.show:30443/iyuuya/denite-ale'
+    " Plug 'https://git.bugfree.show:30443/Shougo/denite.nvim'
+    "     Plug 'https://git.bugfree.show:30443/Shougo/neomru.vim'
+    "     Plug 'https://git.bugfree.show:30443/Shougo/neoyank.vim'
+    "     Plug 'https://git.bugfree.show:30443/pocari/vim-denite-command-history'
+    "     Plug 'https://git.bugfree.show:30443/iyuuya/denite-ale'
 
 
 "     " 格式化table
 "     " Plug 'https://git.bugfree.show:30443/dhruvasagar/vim-table-mode'
 "     " 中文文档规范化
 "     " Plug 'https://git.bugfree.show:30443/hotoo/pangu.vim'
-      " 快速对齐
-"     " Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
 "     " 文件头
 "     " Plug 'https://git.bugfree.show:30443/alpertuna/vim-header'
-"         " python
-"         " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-jedi'
-"         " go
-"         " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-go'
-"         " zsh
-"         " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-zsh'
 "     " 代码跳转
 "     " Plug 'https://git.bugfree.show:30443/davidhalter/jedi-vim'
 "     " Plug 'https://git.bugfree.show:30443/dgryski/vim-godef'
-"         Plug 'https://git.bugfree.show:30443/tpope/vim-repeat'
 "     " 快速编辑时间
 "     " Plug 'https://git.bugfree.show:30443/tpope/vim-speeddating'
 
