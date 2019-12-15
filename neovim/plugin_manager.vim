@@ -21,8 +21,6 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/luochen1990/rainbow'
     " 高亮复制
     Plug 'https://git.bugfree.show:30443/machakann/vim-highlightedyank'
-    " 图标
-    Plug 'https://git.bugfree.show:30443/ryanoasis/vim-devicons'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                operate                                "
@@ -34,6 +32,7 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/scrooloose/nerdcommenter'
     " 目录树
     Plug 'https://git.bugfree.show:30443/scrooloose/nerdtree'
+    " NOTE: 无法跟nerdtree对齐，暂时禁用
     Plug 'https://git.bugfree.show:30443/Xuyuanp/nerdtree-git-plugin'
     " 引号括号
     Plug 'https://git.bugfree.show:30443/jiangmiao/auto-pairs'
@@ -46,9 +45,9 @@ scriptencoding utf-8
     " 快速对齐
     Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
     " 模糊搜索
-    Plug '/bin/fzf'
+    Plug b:fzf_host_prog
     Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
-    "
+
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -80,6 +79,30 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/tpope/vim-fugitive.git'
     " 各个语言的语法高亮、缩进
     Plug 'https://git.bugfree.show:30443/sheerun/vim-polyglot'
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                                Special                                "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    " 图标，放在最后
+    Plug 'https://git.bugfree.show:30443/ryanoasis/vim-devicons'
+    Plug 'https://git.bugfree.show:30443/vwxyutarooo/nerdtree-devicons-syntax.git'
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                                Legacy                                 "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    " 格式化table
+    " Plug 'https://git.bugfree.show:30443/dhruvasagar/vim-table-mode'
+    " 中文文档规范化
+    " Plug 'https://git.bugfree.show:30443/hotoo/pangu.vim'
+    " 文件头
+    " Plug 'https://git.bugfree.show:30443/alpertuna/vim-header'
+    " 代码跳转
+    " Plug 'https://git.bugfree.show:30443/davidhalter/jedi-vim'
+    " Plug 'https://git.bugfree.show:30443/dgryski/vim-godef'
+    " 快速编辑时间
+    " Plug 'https://git.bugfree.show:30443/tpope/vim-speeddating'
     " 显示函数签名
     " echodoc不显示golang的函数签名，暂时禁用
     " Plug 'https://git.bugfree.show:30443/Shougo/echodoc.vim'
@@ -91,20 +114,7 @@ scriptencoding utf-8
     "     Plug 'https://git.bugfree.show:30443/pocari/vim-denite-command-history'
     "     Plug 'https://git.bugfree.show:30443/iyuuya/denite-ale'
 
-
-"     " 格式化table
-"     " Plug 'https://git.bugfree.show:30443/dhruvasagar/vim-table-mode'
-"     " 中文文档规范化
-"     " Plug 'https://git.bugfree.show:30443/hotoo/pangu.vim'
-"     " 文件头
-"     " Plug 'https://git.bugfree.show:30443/alpertuna/vim-header'
-"     " 代码跳转
-"     " Plug 'https://git.bugfree.show:30443/davidhalter/jedi-vim'
-"     " Plug 'https://git.bugfree.show:30443/dgryski/vim-godef'
-"     " 快速编辑时间
-"     " Plug 'https://git.bugfree.show:30443/tpope/vim-speeddating'
-
-      call plug#end()
+    call plug#end()
 " }}}
 
 " 载入插件的配置

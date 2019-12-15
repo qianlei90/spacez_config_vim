@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
-let g:fzf_command_prefix='FZF'
+" 在所有命令前面加前缀
+" let g:fzf_command_prefix='FZF'
 
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)

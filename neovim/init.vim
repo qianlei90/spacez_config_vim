@@ -26,6 +26,12 @@ scriptencoding utf-8
         let b:spacez_config_vim_enable_guicolors = expand('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
     endif
 
+    " fzf路径
+    let b:fzf_host_prog = '/usr/bin/fzf'
+    if exists('$SPACEZ_CONFIG_VIM_FZF_PATH')
+        let b:fzf_host_prog = expand('$SPACEZ_CONFIG_VIM_FZF_PATH')
+    endif
+
     " 路径
     let b:spacez_config_vim_root_dir                 = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h:h')
     let b:spacez_config_vim_plugins_dir              = b:spacez_config_vim_root_dir  .'/plugins'

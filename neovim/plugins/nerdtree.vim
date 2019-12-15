@@ -14,3 +14,5 @@ let NERDTreeIgnore=['\.py[co]$']
 
 nnoremap <silent> <Leader>nn :silent NERDTreeToggle<CR>
 nnoremap <silent> <Leader>nf :silent NERDTreeFind<CR>
+
+autocmd FileType nerdtree setlocal nolist
