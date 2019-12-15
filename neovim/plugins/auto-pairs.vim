@@ -16,3 +16,13 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 let g:AutoPairsShortcutToggle = '<M-p>'
 let g:AutoPairsShortcutFastWrap = '<M-e>'
 let g:AutoPairsShortcutJump = '<M-n>'
+
+" vimscript中不使用"配对
+autocmd FileType vim let b:AutoPairs = {
+\   '(': ')',
+\   '[': ']',
+\   '{': '}',
+\   "'": "'",
+\   '`': '`',
+\   '<': '>',
+\ }
