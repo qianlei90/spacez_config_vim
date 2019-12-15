@@ -13,6 +13,5 @@ call deoplete#custom#option({
 \ 'max_list': 20,
 \ 'num_processes': 0,
 \ })
-
 call deoplete#custom#source('look', 'min_pattern_length', 3)
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })

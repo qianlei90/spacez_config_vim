@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile']
+
 " 第三方插件 {{{
     let g:plug_threads = 64
     let g:plug_timeout = 20
@@ -13,9 +15,7 @@ scriptencoding utf-8
     " 配色
     Plug 'https://git.bugfree.show:30443/joshdick/onedark.vim.git'
     " 状态栏
-    " NOTICE: 需要先安装字体
-    " REF: https://github.com/ryanoasis/nerd-fonts
-    Plug 'https://git.bugfree.show:30443/vim-airline/vim-airline'
+    Plug 'https://git.bugfree.show:30443/itchyny/lightline.vim.git', { 'as': 'lightline' }
     " 启动页面
     Plug 'https://git.bugfree.show:30443/mhinz/vim-startify'
     " 高亮括号
@@ -36,13 +36,11 @@ scriptencoding utf-8
     " 模糊搜索
     Plug b:fzf_host_prog
     Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
-    " 快速注释
-    Plug 'https://git.bugfree.show:30443/scrooloose/nerdcommenter'
     " 快速对齐
     Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
     " 目录树
-    Plug 'https://git.bugfree.show:30443/scrooloose/nerdtree'
-    Plug 'https://git.bugfree.show:30443/Xuyuanp/nerdtree-git-plugin'
+    Plug 'https://git.bugfree.show:30443/scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+    Plug 'https://git.bugfree.show:30443/Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
     " 引号括号
     Plug 'https://git.bugfree.show:30443/jiangmiao/auto-pairs'
     Plug 'https://git.bugfree.show:30443/tpope/vim-surround'
@@ -56,10 +54,12 @@ scriptencoding utf-8
     "                              develop                                  "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+    " 快速注释
+    Plug 'https://git.bugfree.show:30443/scrooloose/nerdcommenter', { 'for': b:hot_dev_ft }
     " Golang开发
-    Plug 'https://git.bugfree.show:30443/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'https://git.bugfree.show:30443/fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
-    Plug 'https://git.bugfree.show:30443/majutsushi/tagbar'
+    Plug 'https://git.bugfree.show:30443/majutsushi/tagbar', { 'for': b:hot_dev_ft }
     " 异步补全
     Plug 'https://git.bugfree.show:30443/Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
@@ -67,22 +67,20 @@ scriptencoding utf-8
         " go
         " Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-go'
         " zsh
-        Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-zsh'
+        Plug 'https://git.bugfree.show:30443/deoplete-plugins/deoplete-zsh', { 'for': 'zsh' }
         " 英文单词查询
         Plug 'https://git.bugfree.show:30443/ujihisa/neco-look'
         " 代码片段
-        Plug 'https://git.bugfree.show:30443/SirVer/ultisnips'
-        Plug 'https://git.bugfree.show:30443/honza/vim-snippets'
+        Plug 'https://git.bugfree.show:30443/SirVer/ultisnips', { 'for': b:hot_dev_ft }
+        Plug 'https://git.bugfree.show:30443/honza/vim-snippets', { 'for': b:hot_dev_ft }
         " vimscript
-        Plug 'https://git.bugfree.show:30443/Shougo/neco-vim'
+        Plug 'https://git.bugfree.show:30443/Shougo/neco-vim', { 'for': 'vim' }
     " 异步语法检查
-    Plug 'https://git.bugfree.show:30443/dense-analysis/ale'
+    Plug 'https://git.bugfree.show:30443/dense-analysis/ale', { 'for': b:hot_dev_ft }
     " 异步CVS提示
     Plug 'https://git.bugfree.show:30443/mhinz/vim-signify'
     " Git
-    Plug 'https://git.bugfree.show:30443/tpope/vim-fugitive.git'
-    " 各个语言的语法高亮、缩进
-    Plug 'https://git.bugfree.show:30443/sheerun/vim-polyglot'
+    " Plug 'https://git.bugfree.show:30443/tpope/vim-fugitive.git'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Special                                "
@@ -90,7 +88,7 @@ scriptencoding utf-8
 
     " 图标，放在最后
     Plug 'https://git.bugfree.show:30443/ryanoasis/vim-devicons'
-    Plug 'https://git.bugfree.show:30443/vwxyutarooo/nerdtree-devicons-syntax.git'
+    Plug 'https://git.bugfree.show:30443/vwxyutarooo/nerdtree-devicons-syntax.git', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Legacy                                 "

@@ -36,3 +36,5 @@ let g:tagbar_type_go     = {
 \ }
 
 nmap <Leader>nm :TagbarToggle<CR>
+
+autocmd FileType markdown let b:tagbar_ignore=1
