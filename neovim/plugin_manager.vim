@@ -48,6 +48,8 @@ scriptencoding utf-8
     " 模糊搜索
     Plug b:fzf_host_prog
     Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
+    " /搜索优化
+    Plug 'https://git.bugfree.show:30443/junegunn/vim-slash.git'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
