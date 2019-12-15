@@ -29,11 +29,19 @@ scriptencoding utf-8
 
     " 快速跳转
     Plug 'https://git.bugfree.show:30443/easymotion/vim-easymotion'
+    " f/F/t/T优化
+    Plug 'https://git.bugfree.show:30443/rhysd/clever-f.vim.git', { 'as': 'clever-f' }
+    " 搜索优化
+    Plug 'https://git.bugfree.show:30443/junegunn/vim-slash.git'
+    " 模糊搜索
+    Plug b:fzf_host_prog
+    Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
     " 快速注释
     Plug 'https://git.bugfree.show:30443/scrooloose/nerdcommenter'
+    " 快速对齐
+    Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
     " 目录树
     Plug 'https://git.bugfree.show:30443/scrooloose/nerdtree'
-    " NOTE: 无法跟nerdtree对齐，暂时禁用
     Plug 'https://git.bugfree.show:30443/Xuyuanp/nerdtree-git-plugin'
     " 引号括号
     Plug 'https://git.bugfree.show:30443/jiangmiao/auto-pairs'
@@ -43,13 +51,6 @@ scriptencoding utf-8
     Plug 'https://git.bugfree.show:30443/tpope/vim-eunuch'
     " undo历史
     Plug 'https://git.bugfree.show:30443/simnalamburt/vim-mundo'
-    " 快速对齐
-    Plug 'https://git.bugfree.show:30443/junegunn/vim-easy-align'
-    " 模糊搜索
-    Plug b:fzf_host_prog
-    Plug 'https://git.bugfree.show:30443/junegunn/fzf.vim.git'
-    " /搜索优化
-    Plug 'https://git.bugfree.show:30443/junegunn/vim-slash.git'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
