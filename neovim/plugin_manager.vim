@@ -13,7 +13,8 @@ scriptencoding utf-8
     " 配色
     Plug 'https://git.bugfree.show:30443/joshdick/onedark.vim.git'
     " 状态栏
-    " NOTICE: 需要先安装字体，REF: https://github.com/ryanoasis/nerd-fonts
+    " NOTICE: 需要先安装字体
+    " REF: https://github.com/ryanoasis/nerd-fonts
     Plug 'https://git.bugfree.show:30443/vim-airline/vim-airline'
     " 启动页面
     Plug 'https://git.bugfree.show:30443/mhinz/vim-startify'
