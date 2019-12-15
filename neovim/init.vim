@@ -63,6 +63,7 @@ scriptencoding utf-8
         let &backupdir = b:spacez_config_vim_caches_dir.'/backups'
         let &directory = b:spacez_config_vim_caches_dir.'/swaps'
         let &undodir   = b:spacez_config_vim_caches_dir.'/undos'
+        let &dict      = b:spacez_config_vim_dict_file
     " }}}
 
     " 缩进 {{{
