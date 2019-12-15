@@ -27,9 +27,15 @@ scriptencoding utf-8
     endif
 
     " fzf路径
-    let b:fzf_host_prog = '/usr/bin/fzf'
+    let b:spacez_config_vim_fzf_path = '/usr/bin/fzf'
     if exists('$SPACEZ_CONFIG_VIM_FZF_PATH')
-        let b:fzf_host_prog = expand('$SPACEZ_CONFIG_VIM_FZF_PATH')
+        let b:spacez_config_vim_fzf_path = expand('$SPACEZ_CONFIG_VIM_FZF_PATH')
+    endif
+
+    " 是否使用github的镜像地址
+    let b:spacez_config_vim_github_mirror = 'https://git::@github.com/%s.git'
+    if exists('$SPACEZ_CONFIG_VIM_GITHUB_MIRROR')
+        let b:spacez_config_vim_github_mirror = expand('$SPACEZ_CONFIG_VIM_GITHUB_MIRROR')
     endif
 
     " 路径
