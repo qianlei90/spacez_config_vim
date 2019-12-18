@@ -1,6 +1,6 @@
 scriptencoding utf-8
 
-let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile']
+let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
 
 " 第三方插件 {{{
     let g:plug_threads    = 64
@@ -130,4 +130,3 @@ for b:plug in keys(g:plugs)
         execute 'source '.b:plug_config_file
     endif
 endfor
-unlet b:plug b:plug_config_file
