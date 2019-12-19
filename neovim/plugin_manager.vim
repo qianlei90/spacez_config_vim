@@ -49,8 +49,9 @@ let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
     Plug 'tpope/vim-eunuch'
     " undo历史
     Plug 'simnalamburt/vim-mundo'
-	" 自动设置paste
+	" copy / paste
 	Plug 'roxma/vim-paste-easy'
+    Plug 'roxma/vim-tmux-clipboard.git'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
