@@ -35,8 +35,7 @@ let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
     " 搜索优化
     Plug 'junegunn/vim-slash'
     " 模糊搜索
-    Plug b:spacez_config_vim_fzf_path
-    Plug 'junegunn/fzf.vim'
+    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
     " 快速对齐
     Plug 'junegunn/vim-easy-align'
     " 目录树
