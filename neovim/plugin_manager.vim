@@ -36,6 +36,8 @@ scriptencoding utf-8
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
     " 快速对齐
     Plug 'junegunn/vim-easy-align', { 'for': ['zsh', 'vim'] }
+    " 整体移动
+    Plug 'matze/vim-move'
     " 目录树
     Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
