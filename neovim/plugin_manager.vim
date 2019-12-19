@@ -80,13 +80,11 @@ scriptencoding utf-8
     Plug 'dense-analysis/ale', { 'for': ['go', 'python', 'json', 'markdown', 'vim'] }
     " 异步CVS提示
     Plug 'mhinz/vim-signify'
-    " 异步执行
-    Plug 'skywind3000/asyncrun.vim', { 'as': 'asyncrun' }
     " Git
     Plug 'tpope/vim-fugitive'
     Plug 'rhysd/git-messenger.vim', { 'as': 'git-messenger' }
     " 格式化table
-    Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'txt'] }
+    Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
     " 中文文档规范化
     Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'] }
 
