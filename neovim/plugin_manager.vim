@@ -1,7 +1,5 @@
 scriptencoding utf-8
 
-let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
-
 " 第三方插件 {{{
     let g:plug_threads    = 64
     let g:plug_timeout    = 20
@@ -37,7 +35,7 @@ let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
     " 模糊搜索
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
     " 快速对齐
-    Plug 'junegunn/vim-easy-align'
+    Plug 'junegunn/vim-easy-align', { 'for': ['zsh', 'vim'] }
     " 目录树
     Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -51,39 +49,42 @@ let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
     Plug 'simnalamburt/vim-mundo'
 	" copy / paste
 	Plug 'roxma/vim-paste-easy'
-    Plug 'roxma/vim-tmux-clipboard.git'
+    Plug 'roxma/vim-tmux-clipboard'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     " 快速注释
-    Plug 'scrooloose/nerdcommenter', { 'for': b:hot_dev_ft }
+    Plug 'scrooloose/nerdcommenter', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " Golang开发
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
-    Plug 'majutsushi/tagbar', { 'for': b:hot_dev_ft }
+    Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " 异步补全
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
-        " Plug 'deoplete-plugins/deoplete-jedi'
-        " go
-        " Plug 'deoplete-plugins/deoplete-go'
+        Plug 'deoplete-plugins/deoplete-jedi', { 'for': 'python' }
         " zsh
         Plug 'deoplete-plugins/deoplete-zsh', { 'for': 'zsh' }
         " 英文单词查询
         Plug 'ujihisa/neco-look'
         " 代码片段
-        Plug 'SirVer/ultisnips', { 'for': b:hot_dev_ft }
-        Plug 'honza/vim-snippets', { 'for': b:hot_dev_ft }
+        Plug 'SirVer/ultisnips', { 'for': ['go', 'python'] }
+        Plug 'honza/vim-snippets', { 'for': ['go', 'python'] }
         " vimscript
         Plug 'Shougo/neco-vim', { 'for': 'vim' }
     " 异步语法检查
-    Plug 'dense-analysis/ale', { 'for': b:hot_dev_ft }
+    Plug 'dense-analysis/ale', { 'for': ['go', 'python', 'json', 'markdown', 'vim'] }
     " 异步CVS提示
     Plug 'mhinz/vim-signify'
     " Git
     Plug 'tpope/vim-fugitive'
+    Plug 'rhysd/git-messenger.vim', { 'as': 'git-messenger' }
+    " 格式化table
+    Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'txt'] }
+    " 中文文档规范化
+    Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'] }
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Special                                "
@@ -97,10 +98,6 @@ let b:hot_dev_ft = ['go', 'python', 'zsh', 'bash', 'vim', 'dockerfile', 'json']
     "                                Legacy                                 "
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-    " 格式化table
-    " Plug 'dhruvasagar/vim-table-mode'
-    " 中文文档规范化
-    " Plug 'hotoo/pangu.vim'
     " 文件头
     " Plug 'alpertuna/vim-header'
     " 代码跳转

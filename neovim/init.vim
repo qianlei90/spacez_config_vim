@@ -26,12 +26,6 @@ scriptencoding utf-8
         let b:spacez_config_vim_enable_guicolors = expand('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
     endif
 
-    " fzf路径
-    let b:spacez_config_vim_fzf_path = '/usr/bin/fzf'
-    if exists('$SPACEZ_CONFIG_VIM_FZF_PATH')
-        let b:spacez_config_vim_fzf_path = expand('$SPACEZ_CONFIG_VIM_FZF_PATH')
-    endif
-
     " 是否使用github的镜像地址
     let b:spacez_config_vim_github_mirror = 'https://git::@github.com/%s.git'
     if exists('$SPACEZ_CONFIG_VIM_GITHUB_MIRROR')
@@ -316,8 +310,6 @@ scriptencoding utf-8
 " }}}
 
 " 缩写 {{{
-    " 垂直打开帮助信息
-    cnoreabbrev h vert help
     " 垂坠打开缓冲区
     cnoreabbrev vsb vert sb
     " 只留下当前窗口
