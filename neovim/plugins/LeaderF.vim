@@ -4,6 +4,17 @@ let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = ''
 let g:Lf_ShortcutB = ''
+let g:Lf_PopupPreviewPosition = 'bottom'
+let g:Lf_CommandMap = {
+    \ '<C-]>': ['<C-v>'],
+    \ '<Down>': ['<C-n>'],
+    \ '<Up>': ['<C-p>'],
+    \ '<Home>': ['<C-a>'],
+    \ '<End>': ['<C-e>'],
+    \ '<C-p>': ['<C-o>'],
+    \ '<C-Up>': ['<Up>'],
+    \ '<C-Down>': ['<Down>'],
+    \ }
 
 nnoremap <silent> <Leader>ff :LeaderfFile<CR>
 nnoremap <silent> <Leader>ft :LeaderfBufTag<CR>
