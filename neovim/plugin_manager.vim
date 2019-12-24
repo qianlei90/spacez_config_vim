@@ -20,7 +20,7 @@ scriptencoding utf-8
     " 高亮括号
     Plug 'luochen1990/rainbow'
     " 高亮复制
-    Plug 'machakann/vim-highlightedyank'
+    " Plug 'machakann/vim-highlightedyank'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                operate                                "
@@ -49,8 +49,8 @@ scriptencoding utf-8
     Plug 'tpope/vim-eunuch'
     " undo历史
     Plug 'simnalamburt/vim-mundo'
-	" copy / paste
-	Plug 'roxma/vim-paste-easy'
+    " copy / paste
+    Plug 'roxma/vim-paste-easy'
     Plug 'roxma/vim-tmux-clipboard'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,8 +72,8 @@ scriptencoding utf-8
         " 英文单词查询
         Plug 'ujihisa/neco-look'
         " 代码片段
-        Plug 'SirVer/ultisnips', { 'for': ['go', 'python'] }
-        Plug 'honza/vim-snippets', { 'for': ['go', 'python'] }
+        Plug 'SirVer/ultisnips', { 'for': ['go', 'python', 'vim'] }
+        Plug 'honza/vim-snippets', { 'for': ['go', 'python', 'vim'] }
         " vimscript
         Plug 'Shougo/neco-vim', { 'for': 'vim' }
     " 异步语法检查
@@ -87,6 +87,8 @@ scriptencoding utf-8
     Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
     " 中文文档规范化
     Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'] }
+    " markdown预览
+    Plug 'iamcco/markdown-preview.nvim', { 'as': 'markdown-preview', 'do': 'cd app && npm install', 'for': ['markdown'] }
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Special                                "
