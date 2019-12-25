@@ -116,8 +116,6 @@ scriptencoding utf-8
     " }}}
 
     " 命令行 {{{
-        " :substitute替换命令默认启用g标志
-        set gdefault
         " 命令行补全忽略部分文件
         " 二进制文件
         set wildignore=*.png,*.jpg,*.gif,*.pdf,*.zip

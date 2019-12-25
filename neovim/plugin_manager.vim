@@ -86,7 +86,7 @@ scriptencoding utf-8
     " 格式化table
     Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
     " 中文文档规范化
-    Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'] }
+    Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'], 'on': ['Pangu'] }
     " markdown预览
     Plug 'iamcco/markdown-preview.nvim', { 'as': 'markdown-preview', 'do': 'cd app && npm install', 'for': ['markdown'] }
 
