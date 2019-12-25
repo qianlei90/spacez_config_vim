@@ -1,4 +1,4 @@
 scriptencoding utf-8
 
-xmap <Leader>a <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
+xmap <Leader>aa <Plug>(EasyAlign)
+nmap <Leader>aa <Plug>(EasyAlign)
