@@ -58,7 +58,7 @@ scriptencoding utf-8
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     " 快速注释
-    Plug 'scrooloose/nerdcommenter', { 'for': ['go', 'python', 'zsh', 'vim'] }
+    Plug 'scrooloose/nerdcommenter'
     " Golang开发
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
