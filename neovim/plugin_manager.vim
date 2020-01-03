@@ -52,6 +52,8 @@ scriptencoding utf-8
     " copy / paste
     Plug 'roxma/vim-paste-easy'
     Plug 'roxma/vim-tmux-clipboard'
+    " dict & translator
+    Plug 'voldikss/vim-translator'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
