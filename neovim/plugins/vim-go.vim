@@ -3,7 +3,10 @@ scriptencoding utf-8
 let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
 let g:go_def_reuse_buffer = 1
-let g:go_def_mode = 'gopls'
+let g:go_def_mode = 'godef'
+let g:go_fmt_options = {
+\ 'gofmt': '-s',
+\ }
 
 au FileType go nmap <silent> <Leader>gi <Plug>(go-def)
 au FileType go nmap <silent> <Leader>go <Plug>(go-def-pop)
