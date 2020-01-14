@@ -19,8 +19,6 @@ scriptencoding utf-8
     Plug 'mhinz/vim-startify'
     " 高亮括号
     Plug 'luochen1990/rainbow'
-    " 高亮复制
-    " Plug 'machakann/vim-highlightedyank'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                operate                                "
@@ -51,7 +49,6 @@ scriptencoding utf-8
     Plug 'simnalamburt/vim-mundo'
     " copy / paste
     Plug 'roxma/vim-paste-easy'
-    Plug 'roxma/vim-tmux-clipboard'
     " dict & translator
     Plug 'voldikss/vim-translator'
 
