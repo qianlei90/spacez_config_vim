@@ -35,7 +35,7 @@ scriptencoding utf-8
     " 快速对齐
     Plug 'junegunn/vim-easy-align', { 'for': ['zsh', 'vim'] }
     " 整体移动
-    Plug 'matze/vim-move'
+    " Plug 'matze/vim-move'
     " 目录树
     Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -48,9 +48,9 @@ scriptencoding utf-8
     " undo历史
     Plug 'simnalamburt/vim-mundo'
     " copy / paste
-    Plug 'roxma/vim-paste-easy'
+    " Plug 'roxma/vim-paste-easy'
     " dict & translator
-    Plug 'voldikss/vim-translator'
+    " Plug 'voldikss/vim-translator'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
@@ -59,13 +59,13 @@ scriptencoding utf-8
     " 快速注释
     Plug 'scrooloose/nerdcommenter'
     " Golang开发
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+    " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
-    Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
+    " Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " 异步补全
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
-        Plug 'deoplete-plugins/deoplete-jedi', { 'for': 'python' }
+        " Plug 'deoplete-plugins/deoplete-jedi', { 'for': 'python' }
         " zsh
         Plug 'deoplete-plugins/deoplete-zsh', { 'for': 'zsh' }
         " 英文单词查询
@@ -87,7 +87,7 @@ scriptencoding utf-8
     " 中文文档规范化
     Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'], 'on': ['Pangu'] }
     " markdown预览
-    Plug 'iamcco/markdown-preview.nvim', { 'as': 'markdown-preview', 'do': 'cd app && npm install', 'for': ['markdown'] }
+    " Plug 'iamcco/markdown-preview.nvim', { 'as': 'markdown-preview', 'do': 'cd app && npm install', 'for': ['markdown'] }
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Special                                "
@@ -96,28 +96,6 @@ scriptencoding utf-8
     " 图标，放在最后
     Plug 'ryanoasis/vim-devicons'
     Plug 'vwxyutarooo/nerdtree-devicons-syntax', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "                                Legacy                                 "
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-    " 文件头
-    " Plug 'alpertuna/vim-header'
-    " 代码跳转
-    " Plug 'davidhalter/jedi-vim'
-    " Plug 'dgryski/vim-godef'
-    " 快速编辑时间
-    " Plug 'tpope/vim-speeddating'
-    " 显示函数签名
-    " echodoc不显示golang的函数签名，暂时禁用
-    " Plug 'Shougo/echodoc.vim'
-    " 模糊搜索
-    " NOTICE: 执行:UpdateRemotePlugins后重启
-    " Plug 'Shougo/denite.nvim'
-    "     Plug 'Shougo/neomru.vim'
-    "     Plug 'Shougo/neoyank.vim'
-    "     Plug 'pocari/vim-denite-command-history'
-    "     Plug 'iyuuya/denite-ale'
 
     call plug#end()
 " }}}

@@ -6,18 +6,21 @@
 
 根据注释修正`~/.config/nvim/init.vim`中的第一部分`全局配置`，一般只需要配置以下环境变量即可：
 
-| 环境变量                             | 说明                                                   | 默认值             |
-|--------------------------------------|--------------------------------------------------------|--------------------|
-| `SPACEZ_CONFIG_VIM_PYTHON2_PATH`     | python2 路径，用来设置 vim 中的`python_host_prog`变量  | `/usr/bin/python2` |
-| `SPACEZ_CONFIG_VIM_PYTHON3_PATH`     | python3 路径，用来设置 vim 中的`python3_host_prog`变量 | `/usr/bin/python3` |
-| `SPACEZ_CONFIG_VIM_ENABLE_PLUGINS`   | 是否启用第三方插件                                     | `1`                |
-| `SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS` | 配色是否启用termguicolors                              | `0`                |
+| 环境变量                             | 说明                                                   | 默认值                            |
+|--------------------------------------|--------------------------------------------------------|-----------------------------------|
+| `SPACEZ_CONFIG_VIM_ROOT_DIR`         | spacez_config_vim 所在的目录                           | `init.vim`所在目录的父目录        |
+| `SPACEZ_CONFIG_VIM_PYTHON2_PATH`     | python2 路径，用来设置 vim 中的`python_host_prog`变量  | `/usr/bin/python2`                |
+| `SPACEZ_CONFIG_VIM_PYTHON3_PATH`     | python3 路径，用来设置 vim 中的`python3_host_prog`变量 | `/usr/bin/python3`                |
+| `SPACEZ_CONFIG_VIM_ENABLE_PLUGINS`   | 是否启用第三方插件                                     | `1`                               |
+| `SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS` | 配色是否启用 termguicolors                             | `0`                               |
+| `SPACEZ_CONFIG_VIM_GITHUB_MIRROR`    | 是否使用 github 的镜像地址                             | `https://git::@github.com/%s.git` |
 
 
-要保证这两个 Python 环境中都有`neovim`这个包，安装方式：
+要保证 Python 环境中有`pynvim`这个包，安装方式：
 
-+ archlinux：`sudo pacman -S python-neovim python2-neovim`
-+ 虚拟环境或其他环境：`pip install neovim`
+```bash
+$ pip install --user pynvim
+```
 
 **建议**：将所用到的环境变量写到`~/.bashrc`或`~/.zshrc`中。
 
@@ -27,19 +30,8 @@
 $ ./install.sh
 ```
 
-如果有使用代理，可以这样快速安装插件：
-
-```bash
-# 先删除之前的插件
-$ rm -rf plugins/*
-# 使用代理，进入 neovim
-$ http_proxy=http://<proxy_host>:<proxy_port> https_proxy=http://<proxy_host>:<proxy_port> ./install.sh
-```
+所有插件都在_plugins_这个目录下，可以随意删除、重装。
 
 ## 三、其它
 
-下列情况下，需要重新在 neovim 中执行`:UpdateRemotePlugins`命令：
-
-+ 修改本项目路径
-+ 修改`python_host_prog`或`python3_host_prog`路径
-+ 安装或重新安装`denite`和`deoplete`插件
+部分插件需要`:UpdateRemotePlugins`命令后才能使用

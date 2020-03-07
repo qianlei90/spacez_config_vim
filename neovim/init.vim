@@ -2,16 +2,10 @@ set encoding=utf-8
 scriptencoding utf-8
 
 " 全局配置 {{{
-    " neovim的python路径
-    " NOTICE: 虚拟环境中的python解释器路径
-    "         虚拟环境中安装neovim包: pip install neovim
-    let g:python_host_prog = '/usr/bin/python2'
-    if exists('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
-        let g:python_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
-    endif
-    let g:python3_host_prog = '/usr/bin/python3'
-    if exists('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
-        let g:python3_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
+    " spacez_config_vim所在的目录
+    let b:spacez_config_vim_root_dir = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h:h')
+    if exists('$SPACEZ_CONFIG_VIM_ROOT_DIR')
+        let b:spacez_config_vim_root_dir = expand('$SPACEZ_CONFIG_VIM_ROOT_DIR')
     endif
 
     " 是否启用插件
@@ -26,6 +20,16 @@ scriptencoding utf-8
         let b:spacez_config_vim_enable_guicolors = expand('$SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS')
     endif
 
+    " neovim使用的python路径
+    let g:python_host_prog = '/usr/bin/python2'
+    if exists('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
+        let g:python_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON2_PATH')
+    endif
+    let g:python3_host_prog = '/usr/bin/python3'
+    if exists('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
+        let g:python3_host_prog = expand('$SPACEZ_CONFIG_VIM_PYTHON3_PATH')
+    endif
+
     " 是否使用github的镜像地址
     let b:spacez_config_vim_github_mirror = 'https://git::@github.com/%s.git'
     if exists('$SPACEZ_CONFIG_VIM_GITHUB_MIRROR')
@@ -33,7 +37,6 @@ scriptencoding utf-8
     endif
 
     " 路径
-    let b:spacez_config_vim_root_dir                 = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h:h')
     let b:spacez_config_vim_plugins_dir              = b:spacez_config_vim_root_dir  .'/plugins'
     let b:spacez_config_vim_caches_dir               = b:spacez_config_vim_root_dir  .'/caches'
     let b:spacez_config_vim_snips_dir                = b:spacez_config_vim_root_dir  .'/snips'
@@ -48,7 +51,7 @@ scriptencoding utf-8
 
 " 插件 {{{
     if b:spacez_config_vim_enable_plugins
-        let b:plugin_manager_file = b:spacez_config_vim_neovim_dir.'/plugin_manager.vim'
+        let b:plugin_manager_file = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h').'/plugin_manager.vim'
         if filereadable(b:plugin_manager_file)
             execute 'source '.b:plugin_manager_file
         endif

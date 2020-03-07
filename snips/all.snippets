@@ -1,4 +1,0 @@
-# 修改自官方的all.snippets文件
-snippet modeline "Vim modeline"
-vim`!v ':set '. (&expandtab ? printf('et sw=%i ts=%i ft=%s', &sw, &ts, &ft) : printf('noet sts=%i sw=%i ts=%i ft=%s', &sts, &sw, &ts, &ft)) . (&tw ? ' tw='. &tw : '') . ':'`
-endsnippet
