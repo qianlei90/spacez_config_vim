@@ -76,7 +76,7 @@ scriptencoding utf-8
         " vimscript
         Plug 'Shougo/neco-vim', { 'for': 'vim' }
     " 异步语法检查
-    Plug 'dense-analysis/ale', { 'for': ['go', 'python', 'json', 'markdown', 'vim'] }
+    Plug 'dense-analysis/ale', { 'for': ['go', 'python', 'json', 'markdown', 'vim', 'sh'] }
     " 异步CVS提示
     Plug 'mhinz/vim-signify'
     " Git
