@@ -34,8 +34,6 @@ scriptencoding utf-8
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
     " 快速对齐
     Plug 'junegunn/vim-easy-align', { 'for': ['zsh', 'vim'] }
-    " 整体移动
-    " Plug 'matze/vim-move'
     " 目录树
     Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -48,9 +46,11 @@ scriptencoding utf-8
     " undo历史
     Plug 'simnalamburt/vim-mundo'
     " copy / paste
-    " Plug 'roxma/vim-paste-easy'
+    Plug 'roxma/vim-paste-easy'
     " dict & translator
-    " Plug 'voldikss/vim-translator'
+    Plug 'voldikss/vim-translator'
+    " 画图
+    Plug 'vim-scripts/DrawIt'
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                              develop                                  "
@@ -61,7 +61,7 @@ scriptencoding utf-8
     " Golang开发
     " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
-    " Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
+    Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " 异步补全
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
@@ -86,8 +86,6 @@ scriptencoding utf-8
     Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
     " 中文文档规范化
     Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'txt'], 'on': ['Pangu'] }
-    " markdown预览
-    " Plug 'iamcco/markdown-preview.nvim', { 'as': 'markdown-preview', 'do': 'cd app && npm install', 'for': ['markdown'] }
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     "                                Special                                "
