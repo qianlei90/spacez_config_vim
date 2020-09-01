@@ -162,6 +162,8 @@ scriptencoding utf-8
         set noshowmode
         " 不更改terminal的光标形状
         set guicursor=
+        " 一行太长的话不折叠成多行
+        set nowrap
 
     " }}}
 
