@@ -59,13 +59,15 @@ scriptencoding utf-8
     " 快速注释
     Plug 'scrooloose/nerdcommenter'
     " Golang开发
-    " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
     " Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " 异步补全
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
         " Plug 'deoplete-plugins/deoplete-jedi', { 'for': 'python' }
+        " go
+        Plug 'deoplete-plugins/deoplete-go', { 'for': 'go', 'do': 'make' }
         " zsh
         Plug 'deoplete-plugins/deoplete-zsh', { 'for': 'zsh' }
         " 英文单词查询
