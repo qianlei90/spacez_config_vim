@@ -46,7 +46,7 @@ scriptencoding utf-8
     " undo历史
     Plug 'simnalamburt/vim-mundo'
     " copy / paste
-    " Plug 'roxma/vim-paste-easy'
+    Plug 'roxma/vim-paste-easy'
     " dict & translator
     " Plug 'voldikss/vim-translator'
     " 画图
@@ -61,7 +61,7 @@ scriptencoding utf-8
     " Golang开发
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     " 源码跳转
-    " Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
+    Plug 'majutsushi/tagbar', { 'for': ['go', 'python', 'zsh', 'vim'] }
     " 异步补全
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         " python
