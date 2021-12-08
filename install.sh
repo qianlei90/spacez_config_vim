@@ -16,7 +16,7 @@ fi
 
 if [ ! -e "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
     curl -fLo  "$HOME/.local/share/nvim/site/autoload/plug.vim" \
-        --create-dirs https://git.bugfree.show:30443/junegunn/vim-plug/raw/branch/master/plug.vim
+        --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 nvim +PlugInstall +qa
